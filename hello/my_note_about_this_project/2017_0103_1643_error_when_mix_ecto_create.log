@@ -1,0 +1,13 @@
+描述： 資料庫沒有啟動的時候，會有如下的回應。
+
+發生的地點： 建立新專案 跑 mix ecto.create 的時候。
+
+---
+
+```log
+** (Mix) The database for Hello.Repo couldn't be created: an exception was raised:
+    ** (DBConnection.ConnectionError) tcp connect (localhost:5432): connection refused - :econnrefused
+        (db_connection) lib/db_connection/connection.ex:148: DBConnection.Connection.connect/2
+        (connection) lib/connection.ex:622: Connection.enter_connect/5
+        (stdlib) proc_lib.erl:247: :proc_lib.init_p_do_apply/3
+```
